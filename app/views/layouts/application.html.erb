@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pbm</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<table width="80%" border="0" align="center">
+  <tr>
+    <td width="303" align="center"><a href="#"><img src="<%= image_path 'logo.jpg' %>" width="50" height="50" ></a><br/>Patient Blood Management</td>
+    <td width="691">&nbsp;</td>
+    <td width="144">&nbsp;</td>
+    <td width="144">&nbsp;</td>
+  </tr>
+  <tr><form action="http://www.google.com" method="get">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>UserName    </td>
+    <td>PassWord      </td>
+  </form>
+  </tr>
+  
+  <tr><%#= form_tag('/available_stocks') %>
+    <td  rowspan="3">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>
+      <%= text_field_tag 'uname', "", :size => 10 %>    </td>
+    <td><%= text_field_tag 'pw', "", :size => 10 %></td>
+    <%#= end %>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><form action="/available_stocks"><input type="submit" name="Submit" value="LogIn" /></form></td>
+    <td><label></label></td>
+  </tr>
+  <tr>
+    <td style="padding:14px;"><%= yield %></td>
+    <td height="334" colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="center">All Right Reserved and Copy Rights 2010 By Surendra</td>
+    <td colspan="2"></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<h2>Available Stock</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>No of Units Available</th>
+      <th>Price</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @available_stocks.each do |available_stock| %>
+      <tr>
+        <td><%= available_stock.blood_type %></td>
+        <td><%= available_stock.units %></td>
+        <td><%= available_stock.price %></td>
+        <td><%#= link_to 'Show', available_stock %></td>
+        <td><%#= link_to 'Edit', edit_available_stock_path(available_stock) %></td>
+        <td><%#= link_to 'Destroy', available_stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Available stock', new_available_stock_path %>

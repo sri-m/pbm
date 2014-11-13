@@ -1,0 +1,15 @@
+<%= semantic_form_for @consumer do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name, :input_html => { :size => 25 } %>
+    <%= f.input :require_blood_group, :as => :select, :collection => Group.pluck(:blood_type) %>
+    <%= f.input :units_required, :input_html => { :size => 25 } %>
+    <%= f.input :email, :input_html => { :size => 25 } %>
+    <%= f.input :phone, :input_html => { :size => 25 } %>
+    <%= f.input :picked_date, :input_html => { :size => 25 } %>
+    <%= f.input :address, :input_html => { :class => 'autogrow', :rows => 6, :cols => 23, :maxlength => 1000 } %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

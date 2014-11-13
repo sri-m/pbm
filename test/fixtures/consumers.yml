@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  require_blood_group: MyString
+  units_required: MyString
+  email: MyString
+  phone: MyString
+  picked_date: MyString
+  address: MyText
+
+two:
+  name: MyString
+  require_blood_group: MyString
+  units_required: MyString
+  email: MyString
+  phone: MyString
+  picked_date: MyString
+  address: MyText

@@ -1,5 +1,5 @@
 ActiveAdmin.register Admin do
-  #menu false
+  menu false
   permit_params :email, :password, :password_confirmation
 
   index do

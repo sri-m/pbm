@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :members, :skip => [:sessions]
+  as :member do
+    get 'members/sign_in' => 'devise/sessions#new', :as => :new_member_session
+    post 'members/sign_in' => 'devise/sessions#create', :as => :member_session
+    match 'members/sign_out' => 'devise/sessions#destroy', :as => :destroy_member_session,
+      :via => Devise.mappings[:member].sign_out_via
+  end
   devise_for :admins, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :groups
@@ -22,6 +29,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcomes#new'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

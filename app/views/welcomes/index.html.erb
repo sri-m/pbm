@@ -1,34 +1,10 @@
-<h1>Listing welcomes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Dob</th>
-      <th>Gender</th>
-      <th>Password</th>
-      <th>Confirm password</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @welcomes.each do |welcome| %>
-      <tr>
-        <td><%= welcome.name %></td>
-        <td><%= welcome.email %></td>
-        <td><%= welcome.phone %></td>
-        <td><%= welcome.dob %></td>
-        <td><%= welcome.gender %></td>
-        <td><%= welcome.password %></td>
-        <td><%= welcome.confirm_password %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<table width="800" border="1" align="center">
+  <tr>
+    <td colspan="2"><div align="justify">      Blood Bank Management System (BBMS) is a browser based system that is designed to store, process, retrieve and analyze information concerned with the administrative and inventory management within a blood bank. This project aims at maintaining all the information pertaining to blood donors, different blood groups available in each blood bank and help them manage in a better way. Aim is to provide transparency in this field, make the process of obtaining blood from a blood bank hassle free and corruption free and make the system of blood bank management effective. <br />
+    </div></td>
+  </tr>
+  <tr>
+    <td width="392"><div align="center"><br/><img src="<%= image_path 'img2.jpg' %>" ></div></td>
+    <td width="392"><div align="center"><br/><img src="<%= image_path 'img3.jpg' %>" ></div></td>
+  </tr>
 </table>
-
-<br>
-
-<%= link_to 'New Welcome', new_welcome_path %>

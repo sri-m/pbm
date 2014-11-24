@@ -1,6 +1,6 @@
 class WelcomesController < ApplicationController
   before_action :set_welcome, only: [:show, :edit, :update, :destroy]
-
+#before_action :authenticate_member!
   # GET /welcomes
   # GET /welcomes.json
   def index

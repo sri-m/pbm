@@ -8,7 +8,7 @@ permit_params :name, :require_blood_group, :units_required, :email, :phone, :pic
     column :units_required
     column :email
     column :phone
-    column :picked_date
+    column :pickup_date
     column :address
     actions
   end
@@ -21,7 +21,7 @@ permit_params :name, :require_blood_group, :units_required, :email, :phone, :pic
     f.input :units_required
     f.input :email
     f.input :phone
-    f.input :picked_date
+    f.input :pickup_date
     f.input :address
     actions
   end

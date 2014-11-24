@@ -1,6 +1,7 @@
 class AvailableStocksController < ApplicationController
   before_action :set_available_stock, only: [:show, :edit, :update, :destroy]
   layout "details"
+  before_action :authenticate_member!
   # GET /available_stocks
   # GET /available_stocks.json
   def index

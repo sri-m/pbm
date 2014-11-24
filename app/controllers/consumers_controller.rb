@@ -1,6 +1,7 @@
 class ConsumersController < ApplicationController
   before_action :set_consumer, only: [:show, :edit, :update, :destroy]
   layout "details"
+  before_action :authenticate_member!
   # GET /consumers
   # GET /consumers.json
   def index
@@ -69,6 +70,6 @@ class ConsumersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def consumer_params
-      params.require(:consumer).permit(:name, :require_blood_group, :units_required, :email, :phone, :picked_date, :address)
+      params.require(:consumer).permit(:name, :require_blood_group, :units_required, :email, :phone, :pickup_date, :address)
     end
 end
